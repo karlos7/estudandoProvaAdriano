@@ -10,11 +10,11 @@ import fvs.edu.br.repository.RevisaoRepository;
 
 @Service
 public class RevisaoService {
-	
+
 	@Autowired
 	private RevisaoRepository repository;
 	
-	public Revisao buscar (Integer id) {
+	public Revisao buscar(Integer id) {
 		Optional<Revisao> obj = repository.findById(id);
 		return obj.orElse(null);
 	}
